@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <title>SCS Web</title>
+  	<link rel="stylesheet" href="/css/main.css"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  </head>
+  
+  <body>
+    <div id="navigation"/>
+    <script>
+      $(document).ready(function() {
+        $('#navigation').load('/navigation-app/navigation #navbar', function(responseText, status){
+          if (status !== 'success') {
+            $('#navigation').html('<span>Fallback to simple navigation</span');
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
